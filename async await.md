@@ -43,7 +43,7 @@
 1. Sync 처럼 보이지만 내부는 Async로 작동하게끔 짠다.
 2. 그러면 Sync Flow가 어긋나므로 이전 상태를 기억해 이어줄 장치가 필요하다. 
     * Continuation 
-    * Continuation Passing Style - Generator, Async, Asynchrous Iterators
+    * Continuation Passing Style - Generator, Async, Asynchronous Iterators
 
 
 ### Async & Promise
@@ -75,10 +75,11 @@
   > Javascript ES6는 명령문 하나하나를 객체 Record로 감싼다. <br/>
   > 연속되어 있는 Record를 계속 진행할지, 특정 명령을 담은 Record에서 잠깐 멈췄다가 다시 시작할지 결정할 수 있다.
 
-2. 하나의 await는 하나의 직렬이다. 병렬 수행하려면 Promise.all 또는 race 처럼 함수에 추상화할 수 밖에 없다.
-3. Promise 
-  * all(*iterable*) : 모든 명령을 기다렸다가 한번에 반환
-  * race(*iterable*) : 먼저 완료된 명령을 반환
+2. 하나의 await는 하나의 직렬이다. 병렬 수행하려면 Promise.all 또는 race 처럼 함수에 추상화할 수 밖에 없다. Promise로 병렬성을 확보한다.
+3. Promise
+    * all(*iterable*) : 모든 명령을 기다렸다가 한번에 반환
+    * race(*iterable*) : 먼저 완료된 명령을 반환 (주의할 것은 남아있는 명령들을 다 신경써야한다는 것)
+    
 
 
 
